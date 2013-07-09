@@ -56,35 +56,36 @@
                             </div>
                             <div class="nav-collapse">
                                 <ul class="nav nav-pills">
-                                    <li class="active single"><a href="index.html">ГЛАВНАЯ
-                                            <i></i>
-                                        </a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2">
-                                            О КОМПАНИИ<i>ООО "Мегасектор"</i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="about.html">О компании</a></li>
-											<li><a href="details.html">Реквизиты</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="products.html">
-                                            ПРОДУКЦИЯ<i>каталог изделий</i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li><a href="portfolio_grid.html">Portfolio Grid</a></li>
-                                            <li><a href="portfolio_item.html">Portfolio Item</a></li>
-                                        </ul>
-                                    </li>
-                                 
-                                    <li class="single">
-										<a href="contact_us.html">КОНТАКТЫ
-                                            <i>на связи с Вами</i>
-                                        </a>
-                                    </li>
+                                  <li class="{% if page.menu == 'index' %} active {% endif %} single">
+                                    <a href="index.html">ГЛАВНАЯ <i></i> </a>
+                                  </li>
+
+                                  <li class="{% if page.menu == 'about' %} active {% endif %} dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2">
+                                        О КОМПАНИИ<i>ООО "Мегасектор"</i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="about.html">О компании</a></li>
+                                        <li><a href="details.html">Реквизиты</a></li>
+                                    </ul>
+                                  </li>
+
+                                  <li class="dropdown">
+                                      <a class="dropdown-toggle" data-toggle="dropdown" href="products.html">
+                                          ПРОДУКЦИЯ<i>каталог изделий</i>
+                                      </a>
+                                      <ul class="dropdown-menu">
+                                          <li><a href="portfolio.html">Portfolio</a></li>
+                                          <li><a href="portfolio_grid.html">Portfolio Grid</a></li>
+                                          <li><a href="portfolio_item.html">Portfolio Item</a></li>
+                                      </ul>
+                                  </li>
+                               
+                                  <li class="single">
+                  <a href="contact_us.html">КОНТАКТЫ
+                                          <i>на связи с Вами</i>
+                                      </a>
+                                  </li>
                                 </ul>
                             </div>
                         </div>
