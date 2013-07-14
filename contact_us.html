@@ -23,40 +23,7 @@
                                 <div id="result">
 
                                 </div>
-                                <form name="contactForm" id="validForm" method="POST" action="send-form-email.php">
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputName">ФИО<sup>*</sup></label>
-                                        <div class="controls">
-                                            <input name="Ваше имя" type="text" class="span4" id="inputName" placeholder="Ваше имя">
-                                            <span class="help-inline">Пожалуйста, укажите как к Вам обращаться</span>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputEmail">Электронная почта<sup>*</sup></label>
-                                        <div class="controls">
-                                            <input name="email" type="text" class="span4" id="inputEmail" placeholder="Email">
-                                            <span class="help-inline">Пожалуйста, укажите корректный email</span>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label for="textarea" class="control-label">Оставьте информацию<sup>*</sup></label>
-                                        <div class="controls">
-                                            <textarea name="комментарии.." rows="4" class="span8" id="textarea"></textarea>
-                                            <span class="help-inline">Пожалуйста, напишите о сути обращения</span>
-                                        </div>
-                                    </div>
-                                    <?php
-                                            require_once('config.php');
-                                            require_once('recaptchalib.php');
-                                            if($use_recaptcha === true){
-                                                echo recaptcha_get_html($publickey);
-                                            }
-                                        ?>
-                                    <div class="control-group form-button-offset">
-                                        <input type="submit" class="btn" value="Отправить" />
-                                    </div>
-                                </form>
-                            </div>
+								<iframe height="557" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="http://megasektor.wufoo.com/embed/z7x4m1/"><a href="http://megasektor.wufoo.com/forms/z7x4m1/">Fill out my Wufoo form!</a></iframe>
 <!-- END LEFT-SIDE CONTACT FORM AREA -->
 
 <!-- BEGIN RIGHT-SIDE CONTACT FORM AREA -->
