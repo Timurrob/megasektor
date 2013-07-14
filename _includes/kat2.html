@@ -1,0 +1,25 @@
+<!-- BREADCRUMBS WITH GREY BACKGROUND --> 
+<br />
+<ul class="breadcrumb">
+  <li><a href="index.html">Главная</a> <span class="divider">/</span></li>
+  <li class="active">Каталог<span class="divider">/</span></li>
+</ul>
+<!-- PRODUCT BOX ROW 1 -->                    
+<div class="row show-grid">                
+  <div class="span12">                        
+    <div>
+      <ul class="thumbnails">
+        {% for i in page.items %}
+          <li class="span3">
+            <div class="thumbnail">
+              <a class='fancybox' href='{{i.img}}'>
+                <img alt="" src="{{i.img}}">
+              </a>
+              <h3>{{i.name}}</h3>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
