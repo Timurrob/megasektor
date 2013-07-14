@@ -1,0 +1,30 @@
+<ul class="nav nav-tabs" id="myTab">
+  {% for i in page.items %}
+  <li class="{% if forloop.index == 1 %} active {% endif %}"><a data-toggle="tab" href="#{{i.id}}">{{i.name}}</a></li>
+  {% endfor %}
+</ul>
+<div class="tab-content" id="myTabContent">
+  {% for i in page.items %}
+    <div id="{{i.id}}" class="tab-pane fade {% if forloop.index == 1 %} active fade in {% endif %}">
+      <div class="row show-grid">                
+        <div class="span12">                        
+          <div>
+            <ul class="thumbnails">
+              {% for v in i.data %}
+                <li class="span3">
+                  <div class="thumbnail">
+                    <a class='fancybox' href='{{v.img}}'>
+                      <img alt="" src="{{v.img}}">
+                    </a>
+                    <h3>{{v.name}}</h3>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
