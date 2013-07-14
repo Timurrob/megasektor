@@ -1,0 +1,9 @@
+---
+  layout: text
+  menu: index
+  title: 'Мегасектор - оф. дистрибьютор SLEVARNA PILANA HULIN в РФ'
+  items:
+    - { name: '45 A-280-DH-S', img: 'img/kat/280/45 A-280-DH-S.jpg' }
+    - { name: '45 B-280-DH-R', img: 'img/kat/280/45 B-280-DH-R.jpg' }
+---
+{% include kat.html %}
