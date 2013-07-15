@@ -238,24 +238,3 @@
 <div class="text-divider1"></div>
 <h2>Каталог гарнитуры сгруппированный по размерам</h2>
 {% include kat-tabbed.html %}
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>
-$(function () {
-  $(".tab-pane img").not(":visible").each(function () {
-    console.log(this.src)
-    $(this).data("src", this.src);
-    this.src = "";
-  });
-
-  $('a[data-toggle="tab"]').click(function(){
-    var id = $(this).attr('href').replace(/#/,'')
-    $("#"+id+" img").each(function () {
-      var self = $(this)
-      if(self.data("src")){
-        this.src = self.data("src")
-        self.data("src", false)
-      }
-    });
-  });
-});
-</script>
