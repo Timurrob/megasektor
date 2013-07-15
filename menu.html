@@ -241,7 +241,8 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
 $(function () {
-  $("img").not(":visible").each(function () {
+  $(".tab-pane img").not(":visible").each(function () {
+    console.log(this.src)
     $(this).data("src", this.src);
     this.src = "";
   });
