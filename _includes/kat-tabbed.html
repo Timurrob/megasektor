@@ -1,6 +1,14 @@
 <ul class="nav nav-tabs" id="myTab">
   {% for i in page.items %}
-  <li class="{% if forloop.index == 1 %} active {% endif %}"><a data-toggle="tab" href="#tab-n-{{forloop.index}}">{{i.name}}</a></li>
+  <li class="{% if forloop.index == 1 %} active {% endif %}">
+    <a data-toggle="tab" href="#tab-n-{{forloop.index}}">
+      {% if i.label %}
+        {{i.label}}
+      {% else %}
+        {{i.name}}
+      {% endif %}
+    </a>
+  </li>
   {% endfor %}
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -16,7 +24,15 @@
                     <a class='fancybox' href='img/kat/{{i.name}}/{{v.name}}.jpg'>
                       <img alt="" src="img/tn-kat/{{i.name}}/{{v.name}}.jpg">
                     </a>
-                    <center><h3>{{v.name}}</h3></center>
+                    <center>
+                      <h3>
+                        {% if i.label %}
+                          {{i.label}}
+                        {% else %}
+                          {{i.name}}
+                        {% endif %}
+                      </h3>
+                    </center>
                   </div>
                 </li>
               {% endfor %}
