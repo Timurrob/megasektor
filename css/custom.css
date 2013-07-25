@@ -2522,3 +2522,8 @@ div.alert {
 .second-logo{
   padding-top: 42px
 }
+
+.fancybox-title .child a{
+  color: white;
+  text-decoration: underline;
+}

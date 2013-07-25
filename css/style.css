@@ -8589,6 +8589,11 @@ div.alert {
   padding-top: 42px
 }
 
+.fancybox-title .child a{
+  color: white;
+  text-decoration: underline;
+}
+
 
 /**** Isotope Filtering ****/
 
