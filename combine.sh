@@ -40,3 +40,10 @@ do
   cat $file >> js/script.js
   echo ';' >> js/script.js
 done
+
+
+
+git add _includes/scripts.html
+git add _includes/styles.html
+git add js/script.js
+git add css/style.css
