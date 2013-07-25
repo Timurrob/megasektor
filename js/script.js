@@ -4035,4 +4035,14 @@ jQuery(document).ready(function($) {
 			$(".follow_img").css('margin-top', Math.floor(((height_li - $(".follow_img").outerHeight(true))/2)+1));
 		}                   
 	});                     
-});                         ;
+});                         
+
+function print_image(){
+  var self = jQuery(this)
+  var relative_url = self.attr('data-img')
+  popup = window.open();
+  popup.document.write("<img src='http://"+window.location.hostname+"/"+relative_url+"'>");
+  popup.print();
+  popup.close();
+}
+;

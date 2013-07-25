@@ -230,3 +230,12 @@ jQuery(document).ready(function($) {
 		}                   
 	});                     
 });                         
+
+function print_image(){
+  var self = jQuery(this)
+  var relative_url = self.attr('data-img')
+  popup = window.open();
+  popup.document.write("<img src='http://"+window.location.hostname+"/"+relative_url+"'>");
+  popup.print();
+  popup.close();
+}

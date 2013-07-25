@@ -21,7 +21,15 @@
               {% for v in i.data %}
                 <li class="span3">
                   <div class="thumbnail">
-                    <a class='fancybox' title='<a href="img/kat/{{i.name}}/{{v.name}}.jpg" target="_blank">Увеличить</a>' href='img/kat/{{i.name}}/{{v.name}}.jpg'>
+                    <a 
+                      class='fancybox' 
+                      title='
+                      <a href="img/kat/{{i.name}}/{{v.name}}.jpg" target="_blank">увеличить</a>
+
+                      <a href="#" onclick="print_image.call(this); return false" data-img="img/kat/{{i.name}}/{{v.name}}.jpg" target="_blank">распечатать</a>
+                      
+                      ' 
+                      href='img/kat/{{i.name}}/{{v.name}}.jpg'>
                       <img alt="" src="img/tn-kat/{{i.name}}/{{v.name}}.jpg">
                     </a>
                     <center>
