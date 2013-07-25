@@ -1213,7 +1213,7 @@ ul.icons {
 .head_phone {
     color: #666666;
     font-family: 'Open Sans',Arial,sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 25px;
     padding-bottom: 0;
 }
@@ -2515,6 +2515,10 @@ div.alert {
 .slogan{
   font-size: 22px;
   line-height: 30px;
-  padding-top: 30px;
+  padding-top: 20px;
   color: #2773ae;
+}
+
+.second-logo{
+  padding-top: 27px
 }
