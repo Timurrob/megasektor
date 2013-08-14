@@ -1,6 +1,14 @@
 <ul class="nav nav-tabs" id="myTab">
   {% for i in page.items %}
-  <li class="{% if forloop.index == 1 %} active {% endif %}"><a data-toggle="tab" href="#tab-n-{{forloop.index}}">{{i.name}}</a></li>
+  <li class="{% if forloop.index == 1 %} active {% endif %}">
+    <a data-toggle="tab" href="#tab-n-{{forloop.index}}">
+      {% if i.label %}
+        {{i.label}}
+      {% else %}
+        {{i.name}}
+      {% endif %}
+    </a>
+  </li>
   {% endfor %}
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -13,10 +21,25 @@
               {% for v in i.data %}
                 <li class="span3">
                   <div class="thumbnail">
-                    <a class='fancybox' href='img/kat/{{i.name}}/{{v.name}}.jpg'>
+                    <a 
+                      class='fancybox' 
+                      title='
+                      <a href="img/kat/{{i.name}}/{{v.name}}.jpg" target="_blank">увеличить</a>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      <a href="#" onclick="print_image.call(this); return false" data-img="img/kat/{{i.name}}/{{v.name}}.jpg" target="_blank">распечатать</a>
+                      
+                      ' 
+                      href='img/kat/{{i.name}}/{{v.name}}.jpg'>
                       <img alt="" src="img/tn-kat/{{i.name}}/{{v.name}}.jpg">
                     </a>
-                    <center><h3>{{v.name}}</h3></center>
+                    <center>
+                      <h3>
+                        {{v.name}}
+                      </h3>
+                    </center>
                   </div>
                 </li>
               {% endfor %}

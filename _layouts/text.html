@@ -10,19 +10,8 @@
         <!--  SEO STUFF END -->
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--  revolution slider plugin : begin -->        
-        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="css/rs-responsive.css" media="screen" />
-        <!--  revolution slider plugin : end -->
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="css/custom.css" />
-        <link rel="stylesheet" href="css/isotope.css" />
-        <link rel="stylesheet" href="css/color_scheme.css" />
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="css/font-awesome.css" />
-        <link rel="stylesheet" href="css/font-awesome-ie7.css" />
-        <link rel="stylesheet" href="css/flexslider.css" />
-        <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
+        {% include styles.html %}
         <!--[if lte IE 8]>
             <link rel="stylesheet" type="text/css" href="css/IE-fix.css" />
         <![endif]-->
@@ -37,13 +26,20 @@
 <!-- HEADER: LOGO AREA -->
                     <div class="span3 logo">
                         <a class="logo" href="index.html">
-                            <img alt="logo" title="bizstrap" src="img/logo.png">
+                            <img alt="logo" title="Megasektor.ru" src="img/logo.png">
                         </a>
                     </div>
-                    <div class="span6 slogan">
-                      Официальный дистрибьютор гарнитуры европейского завода Slevarna Pilana Hulin
+                    <div class="span7">
+                      <div class='row'>
+                        <div class='span5 slogan'>
+                          Официальный дистрибьютор гарнитуры европейского завода Slevarna Pilana Hulin
+                        </div>
+                        <div class='span2'>
+                          <img alt="logo" class='second-logo' src="img/logo2.png" width='100px'>
+                        </div>
+                      </div>
                     </div>
-                    <div class="span3">
+                    <div class="span2">
 <!-- HEADER: PHONE NUMBER -->
                         <p class="head_phone"><a href="tel:+7 (499) 726-57-26">+7 (499) 726-57-26</a></p>
                     </div>
@@ -64,7 +60,7 @@
                                   </li>
 
                                   <li class="{% if page.menu == 'about' %} active {% endif %} dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2">
+                                    <a class="dropdown-toggle disabled" data-toggle="dropdown" href="about.html">
                                         О КОМПАНИИ<i>ООО "Мегасектор"</i>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -74,21 +70,19 @@
                                   </li>
 
                                   <li class="dropdown">
-                                      <a class="dropdown-toggle" data-toggle="dropdown" href="garnitura.html">
+                                      <a class="dropdown-toggle disabled" data-toggle="dropdown" href="garnitura.html">
                                           ПРОДУКЦИЯ<i>каталоги изделий</i>
                                       </a>
                                       <ul class="dropdown-menu">
-					  <li><a href="garnitura.html">Гарнитура</a></li>
+                                          <li><a href="garnitura.html">Гарнитура</a></li>
                                           <li><a href="blasting.html">Точное литье (нестандартное)</a></li>
                                           <li><a href="stainless.html">Жаростойкая нержавеющая сталь</a></li>
-					  <li><a href="ductile_iron.html">Высокопрочный чугун</a></li>
-					  <li><a href="others.html">Прочее</a></li>
+                                          <li><a href="ductile_iron.html">Высокопрочный чугун</a></li>
+                                          <li><a href="others.html">Прочее</a></li>
                                       </ul>
                                   </li>
                                   <li class="single">
-                  <a href="contact_us.html">КОНТАКТЫ
-                                          <i>на связи с Вами</i>
-              	  </a>
+                                    <a href="contact_us.html">КОНТАКТЫ <i>на связи с Вами</i> </a>
                                   </li>
                                 </ul>
                             </div>
@@ -156,14 +150,19 @@
                 <div class="container">
                     <div class="row show-grid">
 <!-- FOOTER: COPYRIGHT TEXT -->
-                        <div class="span12">
+                        <div class="span10">
                             <p> Все права защищены, copyright 2013.</p>
+                        </div>
+
+                        <div class='span2' style='padding-top: 10px'>
+                          {% include metrika_informer.html %}
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-<!-- END FOOTER -->
       {% include scripts.html %}
+      {% include metrika_counter.html %}
+      {% include ganal.html %}
     </body>
 </html>
